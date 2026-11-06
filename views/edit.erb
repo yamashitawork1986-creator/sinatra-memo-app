@@ -1,0 +1,7 @@
+<h1>メモ編集</h1>
+
+<form action="/memos/<%= Rack::Utils.escape_html(@memo["id"]) %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="text" name="title" value="<%= Rack::Utils.escape_html(@memo["title"]) %>" autocomplete="off">
+  <button type="submit">更新</button>
+</form>

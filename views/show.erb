@@ -1,0 +1,10 @@
+<h1>メモ詳細</h1>
+
+<p><%= Rack::Utils.escape_html(@memo["title"]) %></p>
+
+<a href="/memos/<%= Rack::Utils.escape_html(@memo["id"]) %>/edit">編集</a>
+
+<form action="/memos/<%= Rack::Utils.escape_html(@memo["id"]) %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button type="submit">削除</button>
+</form>
