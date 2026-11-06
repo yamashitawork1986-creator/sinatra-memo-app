@@ -1,0 +1,7 @@
+<h1>メモ一覧</h1>
+
+<% @memos.each do |memo| %>
+  <p>
+    <a href="/memos/<%= Rack::Utils.escape_html(memo["id"]) %>"><%= Rack::Utils.escape_html(memo["title"]) %></a>
+  </p>
+<% end %>
